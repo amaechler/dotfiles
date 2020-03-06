@@ -1,0 +1,22 @@
+[include]
+    path = c:/Users/andreasm/Dropbox/dotfiles/git/gitconfig
+[core]
+    editor = "code -w"
+[credential]
+    helper = manager
+[difftool "bc"]
+    path = c:/Users/andreasm/scoop/apps/beyondcompare/current/Bcomp.exe
+[mergetool "bc"]
+    path = c:/Users/andreasm/scoop/apps/beyondcompare/current/Bcomp.exe
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+[gpg]
+    program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
+[difftool "sourcetree"]
+    cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+    cmd = "'' "
+    trustExitCode = true

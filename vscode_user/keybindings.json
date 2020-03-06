@@ -1,0 +1,5 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "ctrl+,", "command": "workbench.action.openGlobalSettings" },
+    { "key": "ctrl+shift+s", "command": "workbench.action.files.saveAll" }
+]

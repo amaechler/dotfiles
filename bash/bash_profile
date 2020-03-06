@@ -1,0 +1,79 @@
+#!/bin/bash
+
+[ -s "/Users/amaechler/.dnx/dnvm/dnvm.sh" ] && . "/Users/amaechler/.dnx/dnvm/dnvm.sh" # Load dnvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s $(brew --prefix nvm)/nvm.sh ] && source $(brew --prefix nvm)/nvm.sh
+[ -s $(brew --prefix nvm)/etc/bash_completion.d/nvm ] && source $(brew --prefix nvm)/etc/bash_completion.d/nvm
+
+
+#
+# Environment variables
+
+export GOPATH=$HOME/Development/_Tools/go
+export PATH=$PATH:/usr/local/sbin:/Users/amaechler/Development/_Tools:$GOPATH/bin:$HOME/.cargo/bin
+
+
+#
+# Aliases
+
+alias ll='ls -AlG'
+
+
+#
+# Informative git command prompt
+
+source ~/Development/_Tools/git-prompt.sh
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="auto"
+PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+#
+# yarn-bin
+
+# Run local yarn/npm binaries as though they are global
+function yarn-bin {
+  # look for bin in current directory's node_modules
+  local bin=$(yarn bin)/$1
+  local cwd=${0:a:h}
+  while ! [[ -a $bin || $cwd == "/" ]]; do
+    # if not found, look for it in parent directories until we hit the root
+    cwd=$(grealpath $cwd/..)
+    bin=$(cd $cwd && yarn bin)/$1
+  done
+  if ! [[ -x $bin ]]; then
+    # try global as a last resort
+    bin=$(yarn global bin)/$1
+  fi
+  if ! [[ -x $bin ]]; then
+    echo "yarn-bin: module '$1' not found"
+    return 1
+  else
+    # invoke it with the supplied arguments
+    $bin ${@:2}
+  fi
+}
+
+declare -a yarn_globals=(
+  "gulp"
+  "jest"
+  "jslint"
+  "karma"
+  "lerna"
+  "mocha"
+  "pli"
+  "prettier"
+  "repo"
+  "tsc"
+  "tslint"
+  "webpack"
+)
+
+for g in ${yarn_globals[@]}; do
+  alias $g="yarn-bin $g"
+done

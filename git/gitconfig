@@ -1,0 +1,94 @@
+[user]
+    name = Andreas Maechler
+    email = amaechler@gmail.com
+    signingkey = 822FBF4304D04673
+[alias]
+    # Show verbose output about tags, branches or remotes
+    branches = branch -a
+    remotes = remote -v
+    stashes = stash list
+    tags = tag -l
+
+    # Graph logs
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+
+    precommit = diff --cached --diff-algorithm=minimal -w
+
+    # A few short commands
+    co = checkout
+    pf = push --force-with-lease
+    ra = rebase --abort
+    rc = rebase --continue
+    ri = rebase -i
+    rs = rebase --skip
+    st = status -sb
+
+    # Undo operations
+    amend = commit --amend
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
+    unstage = reset -q HEAD --
+    nevermind = !git reset --hard HEAD && git clean -d -f
+
+    # Get the current branch name (not so useful in itself, but used in other aliases)
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+    # Rename a branch (local and remote)
+    branchm = "!git branch -m $2 $3 && git push $1 :$2 $3 -u #"
+
+    # Push the current branch to the remote "origin", and set it to track the upstream branch
+    publish = "!git push -u origin $(git branch-name)"
+
+    # Fire up your difftool with all the changes that are on the current branch.
+    code-review = difftool origin/master...
+
+    # Reset the current branch to the remote branch
+    ro = "!git reset --hard origin/$(git branch-name)"
+[color]
+    # Enable colours in command line output
+    branch = true
+    diff = true
+    grep = true
+    interactive = true
+    pager = true
+    showBranch = true
+    status = true
+    ui = true
+[commit]
+    # gpgsign = true
+[core]
+    # Don't automatically convert line endings on checkout.
+    # We use .gitattributes files to normalize line endings
+    # at the repository level:
+    # https://help.github.com/articles/dealing-with-line-endings/
+    autocrlf = false
+    editor = vim
+[diff]
+    tool = bc
+    compactionHeuristic = true
+[difftool]
+    prompt = false
+[fetch]
+    # When invoking `git fetch`, remove remote branch references
+    # for branches that no longer exist on the remote.
+    prune = true
+[merge]
+    # Don't keep .orig files
+    keepbackup = false
+    tool = bc
+[mergetool]
+    keepBackup = false
+[pull]
+    # When invoking `git pull`, FAIL the pull operation if
+    # the branch cannot be fast-forwarded. In other words,
+    # do not attempt to merge the remote branch into the
+    # local branch. We almost never want this.
+    ff = only
+[push]
+    # When invoking `git push` with no further arguments,
+    # safely push the current branch to "upstream" branch;
+    # this is the default as of Git 2.0
+    default = simple
+[rebase]
+    autosquash = true

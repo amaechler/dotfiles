@@ -1,0 +1,224 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "diffEditor.renderIndicators": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "alt",
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "boundary",
+
+    "extensions.autoUpdate": true,
+    "extensions.ignoreRecommendations": false,
+
+    "files.associations": {
+        "*.powershell": "powershell",
+        "*.css": "css"
+    },
+
+    "telemetry.enableTelemetry": false,
+
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "RemoteSigned", "-NoLogo"],
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    "window.zoomLevel": 0,
+
+    "workbench.activityBar.visible": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showIcons": false,
+    "workbench.startupEditor": "newUntitledFile",
+
+    // language formatters
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+    // settings for extensions below
+    "csharp.suppressDotnetRestoreNotification": true,
+
+    "cSpell.userWords": [
+        "Aspose",
+        "DEVTOOLS",
+        "Owin",
+        "Proxied",
+        "Scroller",
+        "Unmappable",
+        "abuy",
+        "afes",
+        "amaechler",
+        "andreasm",
+        "apos",
+        "approvalchains",
+        "artifactsbuildnumber",
+        "behaviour",
+        "behaviours",
+        "bichsel",
+        "bugfixes",
+        "businessassociates",
+        "businessunits",
+        "checkmark",
+        "checkmarks",
+        "clientbroadcastmanager",
+        "codelineitems",
+        "convertlineitems",
+        "converttransactions",
+        "costcenter",
+        "costcenters",
+        "csstype",
+        "debounced",
+        "debounces",
+        "debouncing",
+        "defaultdivisionofinterest",
+        "divisionofinterests",
+        "doaction",
+        "dois",
+        "dropdown",
+        "editability",
+        "editcoding",
+        "editgrid",
+        "editproductiondate",
+        "filesize",
+        "filestore",
+        "finalapprove",
+        "finalizer",
+        "findduplicates",
+        "firstname",
+        "guids",
+        "hjson",
+        "hola",
+        "invoiceaction",
+        "issuetype",
+        "jira",
+        "landrite",
+        "lastname",
+        "leibel",
+        "lifecycle",
+        "lineitem",
+        "mergeable",
+        "middlewares",
+        "mixins",
+        "multiselect",
+        "namedroles",
+        "newlineitems",
+        "notready",
+        "octokit",
+        "onhold",
+        "openapi",
+        "pandell",
+        "payor",
+        "pdfobject",
+        "picklist",
+        "picklists",
+        "pricelist",
+        "quickpay",
+        "repo",
+        "repos",
+        "rerender",
+        "returntoapproved",
+        "returntoapproving",
+        "returntoassigning",
+        "returntocoding",
+        "scrollbar",
+        "sendtoapproving",
+        "serializable",
+        "serializers",
+        "serilog",
+        "signin",
+        "simplegit",
+        "slickgrid",
+        "stateful",
+        "storyshots",
+        "subfeature",
+        "swashbuckle",
+        "targetenv",
+        "teamcity",
+        "testcompany",
+        "testid",
+        "textbox",
+        "textfield",
+        "thunberg",
+        "tipsheet",
+        "transferors",
+        "tsbuildinfo",
+        "tslib",
+        "unmount",
+        "unparsed",
+        "urljoin",
+        "uuid",
+        "validatable",
+        "viewmodel",
+        "viewmodels",
+        "webapp"
+    ],
+
+    "eslint.autoFixOnSave": true,
+    "eslint.lintTask.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.validate": [
+        { "language": "javascript", "autoFix": true },
+        { "language": "javascriptreact", "autoFix": true },
+        { "language": "typescript", "autoFix": true },
+        { "language": "typescriptreact", "autoFix": true },
+        { "language": "html", "autoFix": true }
+    ],
+
+    "githubPullRequests.telemetry.enabled": false,
+
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "gitlens.advanced.similarityThreshold": 95,
+    "gitlens.advanced.telemetry.enabled": false,
+    "gitlens.keymap": "chorded",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+
+    "liveshare.guestApprovalRequired": true,
+
+    "mssql.format.alignColumnDefinitionsInColumns": true,
+    "mssql.format.datatypeCasing": "uppercase",
+    "mssql.format.keywordCasing": "uppercase",
+    "mssql.format.placeSelectStatementReferencesOnNewLine": true,
+
+    "todohighlight.keywords": [
+        "TODO",
+        "@todo"
+    ],
+
+    "wallaby.showUpdateNotifications": false,
+    "task.slowProviderWarning": [
+        "typescript"
+    ],
+    "git.autofetch": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "prettier.tabWidth": 4,
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.highlights.enabled": true
+}
