@@ -52,3 +52,10 @@ $ ln -s ~/Dropbox/dotfiles/vscode_user/ ~/Library/Application\ Support/Code/User
 # windows
 > mklink /J C:\Users\andreasm\AppData\Roaming\Code\User C:\Users\andreasm\Dropbox\dotfiles\vscode_user
 ```
+
+## Windows Terminal
+
+```sh
+# windows
+> mklink "C:\Users\amaechler\AppData\Local\Microsoft\Windows Terminal\profiles.json" "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\windows-terminal\profiles.json"
+```
