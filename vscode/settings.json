@@ -1,11 +1,15 @@
 // Place your settings in this file to overwrite the default settings
 {
     "diffEditor.renderIndicators": false,
+    "diffEditor.renderSideBySide": true,
     "diffEditor.ignoreTrimWhitespace": true,
+
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "alt",
     "editor.renderIndentGuides": true,
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "all",
+
+    "explorer.confirmDragAndDrop": false,
 
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": false,
@@ -26,7 +30,7 @@
 
     "workbench.activityBar.visible": true,
     "workbench.editor.enablePreview": false,
-    "workbench.editor.showIcons": false,
+    "workbench.editor.limit.enabled": true,
     "workbench.startupEditor": "newUntitledFile",
 
     // language formatters
@@ -60,12 +64,14 @@
         "Scroller",
         "Unmappable",
         "abuy",
+        "advancedsearch",
         "afes",
         "amaechler",
         "andreasm",
         "apos",
         "approvalchains",
         "artifactsbuildnumber",
+        "assignmentrules",
         "behaviour",
         "behaviours",
         "bichsel",
@@ -78,6 +84,7 @@
         "codelineitems",
         "convertlineitems",
         "converttransactions",
+        "copyinvoice",
         "costcenter",
         "costcenters",
         "csstype",
@@ -144,6 +151,7 @@
         "slickgrid",
         "stateful",
         "storyshots",
+        "stylelint",
         "subfeature",
         "swashbuckle",
         "targetenv",
@@ -164,18 +172,18 @@
         "validatable",
         "viewmodel",
         "viewmodels",
-        "webapp"
+        "webapp",
+        "widget's"
     ],
 
-    "eslint.autoFixOnSave": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
     "eslint.validate": [
-        { "language": "javascript", "autoFix": true },
-        { "language": "javascriptreact", "autoFix": true },
-        { "language": "typescript", "autoFix": true },
-        { "language": "typescriptreact", "autoFix": true },
-        { "language": "html", "autoFix": true }
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html"
     ],
 
     "githubPullRequests.telemetry.enabled": false,
@@ -220,5 +228,14 @@
     },
     "prettier.tabWidth": 4,
     "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.highlights.enabled": true
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "todo"
+    ],
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|@)\\s*($TAGS)|^\\s*- \\[ \\])",
 }

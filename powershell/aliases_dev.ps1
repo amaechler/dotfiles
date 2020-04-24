@@ -39,7 +39,7 @@ function ap-restore-test()
 function ap-run-upgrade()
 {
     # run all upgrade tasks
-    & ${PandellDevelopmentDir}AP\nuget_modules\Pandell.Pli.Tools.6.4.0\tools\PliCmd.exe `
+    & ${PandellDevelopmentDir}AP\nuget_modules\Pandell.Pli.Tools.6.4.1\tools\PliCmd.exe `
         -d "appConfig:${PandellDevelopmentDir}AP\src\Pandell.AP.Web\Web.config" `
         -x UpgradeDatabase
 }

@@ -13,10 +13,10 @@
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-[gpg]
-    program = C:/Program Files (x86)/GnuPG/bin/gpg.exe
 [difftool "sourcetree"]
-    cmd = '' \"$LOCAL\" \"$REMOTE\"
+    path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
+    cmd = 'C:/Users/amaechler/scoop/apps/beyondcompare/current/BComp.exe' \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
-    cmd = "'' "
+    path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
+    cmd = 'C:/Users/amaechler/scoop/apps/beyondcompare/current/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
     trustExitCode = true

@@ -7,11 +7,12 @@
 $ ln -s ~/Dropbox/dotfiles/git/gitconfig_macos .gitconfig
 
 # windows
-> mklink c:\Users\andreasm\.gitconfig c:\Users\andreasm\Dropbox\dotfiles\git\gitconfig_windows
+> mklink c:\Users\andreasm\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows_andreasm"
+> mklink c:\Users\amaechler\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows_amaechler"
 
 # old_windows, because standard remote home drive does not support sym links
-> copy c:\Users\andreasm\Dropbox\dotfiles\git\gitconfig_windows m:\.gitconfig
-> mklink c:\Users\andreasm\.gitconfig c:\Users\andreasm\Dropbox\dotfiles\git\gitconfig_windows
+> copy "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows" m:\.gitconfig
+> mklink c:\Users\amaechler\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows"
 ```
 
 ## Bash
@@ -30,27 +31,25 @@ Simply import configuration file.
 
 ```sh
 # windows
-mklink /J C:\Users\andreasm\Documents\WindowsPowerShell C:\Users\andreasm\Dropbox\dotfiles\WindowsPowerShell
+mklink /J C:\Users\amaechler\Documents\WindowsPowerShell "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\powershell"
 
 # windows (powershell core)
-mklink /J C:\Users\andreasm\Documents\WindowsPowerShell C:\Users\andreasm\Dropbox\dotfiles\WindowsPowerShell
+mklink /J C:\Users\amaechler\Documents\PowerShell "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\powershell"
 ```
 
 ## vim
 
 ```sh
 # windows, elevated prompt
-> mklink "C:\Users\andreasm\_vimrc" c:\Users\andreasm\Dropbox\dotfiles\vim\_vimrc
+> mklink "C:\Users\amaechler\_vimrc" "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\vim\_vimrc"
 ```
 
 ## VSCode user settings
 
 ```sh
-# macos
-$ ln -s ~/Dropbox/dotfiles/vscode_user/ ~/Library/Application\ Support/Code/User
-
 # windows
-> mklink /J C:\Users\andreasm\AppData\Roaming\Code\User C:\Users\andreasm\Dropbox\dotfiles\vscode_user
+> mklink C:\Users\amaechler\AppData\Roaming\Code\User\settings.json "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\vscode\settings.json"
+> mklink C:\Users\amaechler\AppData\Roaming\Code\User\keybindings.json "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\vscode\keybindings.json"
 ```
 
 ## Windows Terminal
