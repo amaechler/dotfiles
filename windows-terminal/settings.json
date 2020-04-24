@@ -3,12 +3,15 @@
 
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-
-    "confirmCloseAllTabs": false,
-    "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+
+    // Launch Settings
     "initialCols": 220,
     "initialRows": 30,
+
+    // Miscellaneous
+    "confirmCloseAllTabs": false,
+
     "profiles": {
         "defaults": {
             // Put settings here that you want to apply to all profiles

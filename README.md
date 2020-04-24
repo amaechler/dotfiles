@@ -57,5 +57,5 @@ $ ln -s ~/Dropbox/dotfiles/vscode_user/ ~/Library/Application\ Support/Code/User
 
 ```sh
 # windows
-> mklink "C:\Users\amaechler\AppData\Local\Microsoft\Windows Terminal\profiles.json" "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\windows-terminal\profiles.json"
+> mklink /J "C:\Users\amaechler\AppData\Local\Microsoft\Windows Terminal" "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\windows-terminal"
 ```
