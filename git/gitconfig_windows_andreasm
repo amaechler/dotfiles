@@ -1,5 +1,5 @@
 [include]
-    path = c:/Users/andreasm/Dropbox/dotfiles/git/gitconfig
+    path = c:/Users/andreasm/Development/GitHub/_Personal/dotfiles/git/gitconfig
 [core]
     editor = "code -w"
 [credential]

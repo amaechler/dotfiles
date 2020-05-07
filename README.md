@@ -7,8 +7,8 @@
 $ ln -s ~/Dropbox/dotfiles/git/gitconfig_macos .gitconfig
 
 # windows
-> mklink c:\Users\andreasm\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows_andreasm"
 > mklink c:\Users\amaechler\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows_amaechler"
+> mklink c:\Users\andreasm\.gitconfig "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows_andreasm"
 
 # old_windows, because standard remote home drive does not support sym links
 > copy "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows" m:\.gitconfig
@@ -32,9 +32,11 @@ Simply import configuration file.
 ```sh
 # windows
 mklink /J C:\Users\amaechler\Documents\WindowsPowerShell "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\powershell"
+mklink /J C:\Users\andreasm\Documents\WindowsPowerShell "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\powershell"
 
 # windows (powershell core)
 mklink /J C:\Users\amaechler\Documents\PowerShell "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\powershell"
+mklink /J C:\Users\andreasm\Documents\PowerShell "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\powershell"
 ```
 
 ## vim
@@ -50,6 +52,9 @@ mklink /J C:\Users\amaechler\Documents\PowerShell "C:\Users\amaechler\Developmen
 # windows
 > mklink C:\Users\amaechler\AppData\Roaming\Code\User\settings.json "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\vscode\settings.json"
 > mklink C:\Users\amaechler\AppData\Roaming\Code\User\keybindings.json "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\vscode\keybindings.json"
+
+> mklink C:\Users\andreasm\AppData\Roaming\Code\User\settings.json "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\vscode\settings.json"
+> mklink C:\Users\andreasm\AppData\Roaming\Code\User\keybindings.json "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\vscode\keybindings.json"
 ```
 
 ## Windows Terminal
@@ -57,4 +62,5 @@ mklink /J C:\Users\amaechler\Documents\PowerShell "C:\Users\amaechler\Developmen
 ```sh
 # windows
 > mklink /J "C:\Users\amaechler\AppData\Local\Microsoft\Windows Terminal" "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\windows-terminal"
+> mklink /J "C:\Users\andreasm\AppData\Local\Microsoft\Windows Terminal" "C:\Users\andreasm\Development\GitHub\_Personal\dotfiles\windows-terminal"
 ```
