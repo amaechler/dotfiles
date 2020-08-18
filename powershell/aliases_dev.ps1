@@ -24,6 +24,22 @@ function ap-restore-dev_andy() {
         -Q "RESTORE DATABASE AP_Development_Andy FROM DISK = '/sqlbackups/AP_Development.bak' WITH MOVE 'AP_Experiment' TO '/var/opt/mssql/data/AP_Development_Andy.mdf', MOVE 'AP_Experiment_log' TO '/var/opt/mssql/data/AP_Development_Andy_log.ldf'"
 }
 
+function ap-restore-experiment_andy() {
+    Copy-Item "\\files.net.pandell.com\Products_And_Support\_Databases\AP\AP_Experiment.bak" -Destination "C:\sqlbackups"
+
+    # drop the existing AP_Development_Andy database
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "DROP DATABASE [AP_Development_Andy]"
+        
+    # list out logical file names and paths inside the backup
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "RESTORE FILELISTONLY FROM DISK = '/sqlbackups/AP_Experiment.bak'"
+    
+    # restore the database inside the container; specify new paths for each of the files from previous step
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "RESTORE DATABASE AP_Development_Andy FROM DISK = '/sqlbackups/AP_Experiment.bak' WITH MOVE 'AP_Experiment' TO '/var/opt/mssql/data/AP_Development_Andy.mdf', MOVE 'AP_Experiment_log' TO '/var/opt/mssql/data/AP_Development_Andy_log.ldf'"
+}
+
 function ap-restore-staging() {
     & ${PandellDevelopmentDir}AP\tools\Restore-Database.ps1 `
         -DatabaseName AP_Staging `
