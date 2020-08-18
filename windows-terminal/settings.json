@@ -29,7 +29,8 @@
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "hidden": false,
-                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png"
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png",
+                "startingDirectory": "C:/Users/amaechler/Development/Pandell"
             },
             {
                 // Make changes here to the cmd.exe profile
@@ -57,7 +58,8 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell (pwsh)",
-                "commandline": "C:\\Users\\amaechler\\scoop\\apps\\pwsh\\current\\pwsh.exe"
+                "commandline": "C:\\Users\\amaechler\\scoop\\apps\\pwsh\\current\\pwsh.exe",
+                "startingDirectory": "C:/Users/amaechler/Development/Pandell"
             }
         ]
     },
