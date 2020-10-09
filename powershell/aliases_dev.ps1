@@ -1,3 +1,6 @@
+# replace PowerShell built-in "curl" alias
+if (Get-Alias curl*) { Remove-Item alias:curl }
+Set-Alias curl ~/scoop/apps/git/current/mingw64/bin/curl.exe
 
 function Cleanup-Pandell-Project() {
     Get-ChildItem -Path . -Recurse -Include *.csproj | `
@@ -83,9 +86,19 @@ function connect-run-upgrade() {
 }
 
 function pcp-restore-dev_andy() {
-    & ${PandellDevelopmentDir}PCP\tools\Restore-Database.ps1 `
-        -DatabaseName PCP_Development_Andy `
-        -CustomDatabaseBackup PCP_Development
+    # Copy-Item "\\files.net.pandell.com\Products_And_Support\_Databases\PCP\PCP_Development.bak" -Destination "C:\sqlbackups"
+
+    # drop the existing AP_Development_Andy database
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "DROP DATABASE [PCP_Development_Andy]"
+        
+    # list out logical file names and paths inside the backup
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "RESTORE FILELISTONLY FROM DISK = '/sqlbackups/PCP_Development.bak'"
+    
+    # restore the database inside the container; specify new paths for each of the files from previous step
+    & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
+        -Q "RESTORE DATABASE PCP_Development_Andy FROM DISK = '/sqlbackups/PCP_Development.bak' WITH MOVE 'PCP_Prod' TO '/var/opt/mssql/data/PCP_Development_Andy.mdf', MOVE 'PCP_Prod_log' TO '/var/opt/mssql/data/PCP_Development_Andy_log.ldf'"
 }
 
 function pcp-restore-experiment() {
