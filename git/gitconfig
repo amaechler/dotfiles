@@ -26,6 +26,7 @@
 
     # Undo operations
     amend = commit --amend
+    clobber = !git -c core.longpaths=true clean -dfX
     discard = checkout --
     uncommit = reset --mixed HEAD~
     unstage = reset -q HEAD --
