@@ -86,7 +86,7 @@ function connect-run-upgrade() {
 }
 
 function pcp-restore-dev_andy() {
-    # Copy-Item "\\files.net.pandell.com\Products_And_Support\_Databases\PCP\PCP_Development.bak" -Destination "C:\sqlbackups"
+    Copy-Item "\\wm2016sql01.net.pandell.com\SQLDROPFOLDER\PCP\PCP_Development.bak" -Destination "C:\sqlbackups"
 
     # drop the existing AP_Development_Andy database
     & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
