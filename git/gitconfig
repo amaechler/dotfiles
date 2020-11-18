@@ -56,15 +56,12 @@
     showBranch = true
     status = true
     ui = true
-[commit]
-    # gpgsign = true
 [core]
     # Don't automatically convert line endings on checkout.
     # We use .gitattributes files to normalize line endings
     # at the repository level:
     # https://help.github.com/articles/dealing-with-line-endings/
     autocrlf = false
-    editor = vim
 [diff]
     tool = bc
     compactionHeuristic = true
@@ -86,10 +83,5 @@
     # do not attempt to merge the remote branch into the
     # local branch. We almost never want this.
     ff = only
-[push]
-    # When invoking `git push` with no further arguments,
-    # safely push the current branch to "upstream" branch;
-    # this is the default as of Git 2.0
-    default = simple
 [rebase]
     autosquash = true

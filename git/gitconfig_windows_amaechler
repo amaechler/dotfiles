@@ -3,7 +3,7 @@
 [core]
     editor = "code -w"
 [credential]
-    helper = manager
+    helper = manager-core
 [difftool "bc"]
     path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
 [mergetool "bc"]
