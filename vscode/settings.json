@@ -29,6 +29,12 @@
     "window.zoomLevel": 0,
 
     "workbench.activityBar.visible": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "git-rebase-todo"
+        }
+    ],
     "workbench.editor.enablePreview": false,
     "workbench.editor.limit.enabled": true,
     "workbench.startupEditor": "newUntitledFile",
@@ -207,9 +213,7 @@
         "suppressWelcomeNotice": true
     },
     "gitlens.advanced.similarityThreshold": 95,
-    "gitlens.advanced.telemetry.enabled": false,
     "gitlens.keymap": "chorded",
-    "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
 
     "liveshare.guestApprovalRequired": true,
@@ -218,11 +222,6 @@
     "mssql.format.datatypeCasing": "uppercase",
     "mssql.format.keywordCasing": "uppercase",
     "mssql.format.placeSelectStatementReferencesOnNewLine": true,
-
-    "todohighlight.keywords": [
-        "TODO",
-        "@todo"
-    ],
 
     "wallaby.showUpdateNotifications": false,
     "task.slowProviderWarning": [
@@ -243,5 +242,5 @@
         "XXX",
         "todo"
     ],
-    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|@)\\s*($TAGS)|^\\s*- \\[ \\])",
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|@)\\s*($TAGS)|^\\s*- \\[ \\])"
 }
