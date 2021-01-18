@@ -13,6 +13,9 @@ $ ln -s ~/Dropbox/dotfiles/git/gitconfig_macos .gitconfig
 # old_windows, because standard remote home drive does not support sym links
 > copy "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows" m:\.gitconfig
 > mklink c:\Users\amaechler\.gitconfig "C:\Users\amaechler\Development\GitHub\_Personal\dotfiles\git\gitconfig_windows"
+
+# wsl2
+$ ln -s /mnt/c/Users/amaechler/Development/GitHub/_Personal/dotfiles/git/gitconfig_wsl2_amaechler ~/.gitconfig
 ```
 
 ## Bash
