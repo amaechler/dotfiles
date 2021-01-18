@@ -1,0 +1,68 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh3/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "root",
+                    "style": "plain",
+                    "foreground": "#26C6DA",
+                    "background": "#546E7A"
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "#26C6DA",
+                    "background": "#546E7A",
+                    "properties": {
+                        "style": "full",
+                        "postfix": " "
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "#D4E157",
+                    "background": "#546E7A",
+                    "properties": {
+                        "prefix": "<#26C6DA>\uE0B1 </>", // nf-pl-left_soft_divider
+                        "display_stash_count": true
+                    }
+                },
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#546E7A",
+                    "background": "transparent",
+                    "properties": {
+                        "text": "\uE0B0", // nf-pl-left_hard_divider
+                        "prefix": "",
+                        "postfix": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "newline"
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "foreground": "#D4E157",
+                    "properties": {
+                        "prefix": "❯",
+                        "always_enabled": true,
+                        "error_color": "#FF5252",
+                        "display_exit_code": false
+                    }
+                }
+            ]
+        }
+    ]
+}
