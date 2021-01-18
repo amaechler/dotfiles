@@ -1,7 +1,6 @@
 [user]
     name = Andreas Maechler
     email = amaechler@gmail.com
-    signingkey = 822FBF4304D04673
 [alias]
     # Show verbose output about tags, branches or remotes
     branches = branch -a
