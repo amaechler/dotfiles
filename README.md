@@ -23,10 +23,6 @@ ln -s /Users/amaechler/Dropbox/dotfiles/bash/bash_profile ~/.bash_profile
 ln -s /Users/amaechler/Dropbox/dotfiles/bash/bashrc ~/.bashrc
 ```
 
-## ConEmu
-
-Simply import configuration file.
-
 ## PowerShell
 
 ```sh
