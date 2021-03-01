@@ -7,23 +7,25 @@
             "segments": [
                 {
                     "type": "root",
-                    "style": "plain",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
                     "foreground": "#26C6DA",
                     "background": "#546E7A"
                 },
                 {
                     "type": "path",
-                    "style": "plain",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
                     "foreground": "#26C6DA",
                     "background": "#546E7A",
                     "properties": {
-                        "style": "full",
-                        "postfix": " "
+                        "style": "full"
                     }
                 },
                 {
                     "type": "git",
-                    "style": "plain",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
                     "foreground": "#D4E157",
                     "background": "#546E7A",
                     "properties": {
@@ -32,14 +34,14 @@
                     }
                 },
                 {
-                    "type": "text",
-                    "style": "plain",
-                    "foreground": "#546E7A",
-                    "background": "transparent",
+                    "type": "executiontime",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
+                    "foreground": "#ffffff",
+                    "background": "#8800dd",
                     "properties": {
-                        "text": "\uE0B0", // nf-pl-left_hard_divider
-                        "prefix": "",
-                        "postfix": ""
+                        "threshold": 500,
+                        "style": "austin"
                     }
                 }
             ]

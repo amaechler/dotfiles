@@ -4,7 +4,6 @@ if ((Get-Module PSReadLine).Version -ge "2.1.0") {
     Set-PSReadLineOption -PredictionSource History # Enable "predictive intellisense" - https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/
     Set-PSReadLineKeyHandler -Chord "Ctrl+>" -Function ForwardWord
     Set-PSReadLineKeyHandler -Chord "Ctrl+<" -Function BackwardWord
-    Set-PSReadLineOption -Colors @{ InlinePrediction = "`e[38;5;241m" }
 }
 
 Import-Module posh-git
