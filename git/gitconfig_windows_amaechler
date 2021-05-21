@@ -13,10 +13,3 @@
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-[difftool "sourcetree"]
-    path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
-    cmd = 'C:/Users/amaechler/scoop/apps/beyondcompare/current/BComp.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-    path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
-    cmd = 'C:/Users/amaechler/scoop/apps/beyondcompare/current/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
-    trustExitCode = true
