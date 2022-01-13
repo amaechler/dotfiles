@@ -4,10 +4,13 @@
     "diffEditor.renderSideBySide": true,
     "diffEditor.ignoreTrimWhitespace": true,
 
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "alt",
-    "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "all",
+    "editor.rulers": [120],
 
     "explorer.confirmDragAndDrop": false,
 
@@ -19,29 +22,35 @@
         "*.css": "css"
     },
 
-    "telemetry.enableTelemetry": false,
+    "git.autofetch": true,
 
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "RemoteSigned", "-NoLogo"],
+    "telemetry.telemetryLevel": "off",
+
+    "terminal.external.windowsExec": "wt.exe",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell (Core)": {
+            "path": "C:\\Users\\${env:USERNAME}\\scoop\\apps\\pwsh\\current\\pwsh.exe",
+            "args": ["-NoLogo"],
+            "overrideName": true
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell (Core)",
+    "terminal.integrated.fontFamily": "CaskaydiaCove NF",
 
     "typescript.updateImportsOnFileMove.enabled": "always",
 
-    "window.zoomLevel": 0,
-
     "workbench.activityBar.visible": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "default",
-            "filenamePattern": "git-rebase-todo"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
     "workbench.editor.enablePreview": false,
     "workbench.editor.limit.enabled": true,
+    "workbench.editor.revealIfOpen": false,
     "workbench.startupEditor": "newUntitledFile",
 
     // language formatters
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -52,141 +61,18 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
     // settings for extensions below
     "csharp.suppressDotnetRestoreNotification": true,
-
-    "cSpell.userWords": [
-        "Aspose",
-        "DEVTOOLS",
-        "OIDC",
-        "Owin",
-        "Proxied",
-        "Scroller",
-        "Unmappable",
-        "Unsubscribable",
-        "Xlsb",
-        "abuy",
-        "advancedsearch",
-        "afes",
-        "amaechler",
-        "andreasm",
-        "apos",
-        "approvalchains",
-        "artifactsbuildnumber",
-        "assignmentrules",
-        "behaviour",
-        "behaviours",
-        "bichsel",
-        "bugfixes",
-        "businessassociates",
-        "businessunits",
-        "checkmark",
-        "checkmarks",
-        "clientbroadcastmanager",
-        "codelineitems",
-        "convertlineitems",
-        "converttransactions",
-        "copyinvoice",
-        "costcenter",
-        "costcenters",
-        "csstype",
-        "dbatools",
-        "debounced",
-        "debounces",
-        "debouncing",
-        "defaultdivisionofinterest",
-        "dissoc",
-        "divisionofinterests",
-        "doaction",
-        "dois",
-        "dropdown",
-        "editability",
-        "editcoding",
-        "editgrid",
-        "editproductiondate",
-        "filesize",
-        "filestore",
-        "finalapprove",
-        "finalizer",
-        "findduplicates",
-        "firstname",
-        "guids",
-        "hjson",
-        "hola",
-        "invoiceaction",
-        "issuetype",
-        "jira",
-        "landrite",
-        "lastname",
-        "leibel",
-        "lifecycle",
-        "lineitem",
-        "mergeable",
-        "middlewares",
-        "mixins",
-        "multiselect",
-        "namedroles",
-        "newlineitems",
-        "notready",
-        "octokit",
-        "onhold",
-        "openapi",
-        "openid",
-        "pandell",
-        "payor",
-        "pdfobject",
-        "picklist",
-        "picklists",
-        "pricelist",
-        "quickpay",
-        "repo",
-        "repos",
-        "rerender",
-        "returntoapproved",
-        "returntoapproving",
-        "returntoassigning",
-        "returntocoding",
-        "scrollbar",
-        "sendtoapproving",
-        "serializable",
-        "serializers",
-        "serilog",
-        "signin",
-        "simplegit",
-        "slickgrid",
-        "stateful",
-        "storyshots",
-        "stylelint",
-        "subfeature",
-        "swashbuckle",
-        "targetenv",
-        "teamcity",
-        "testcompany",
-        "testid",
-        "textbox",
-        "textfield",
-        "thunberg",
-        "tipsheet",
-        "transferors",
-        "tsbuildinfo",
-        "tslib",
-        "unmount",
-        "unparsed",
-        "urljoin",
-        "uuid",
-        "validatable",
-        "viewmodel",
-        "viewmodels",
-        "webapp",
-        "widget's"
-    ],
 
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
@@ -198,23 +84,13 @@
         "html"
     ],
 
-    "githubPullRequests.telemetry.enabled": false,
-
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
     "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
         "suppressFileNotUnderSourceControlWarning": true,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
+        "suppressRebaseSwitchToTextWarning": true
     },
     "gitlens.advanced.similarityThreshold": 95,
     "gitlens.keymap": "chorded",
-    "gitlens.views.lineHistory.enabled": true,
 
     "liveshare.guestApprovalRequired": true,
 
@@ -223,16 +99,14 @@
     "mssql.format.keywordCasing": "uppercase",
     "mssql.format.placeSelectStatementReferencesOnNewLine": true,
 
-    "wallaby.showUpdateNotifications": false,
-    "task.slowProviderWarning": [
-        "typescript"
-    ],
-    "git.autofetch": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
+    "omnisharp.defaultLaunchSolution": "",
+
+    "openapi.securityAuditToken": "CiAqJNhWdr2iRK/wCWbCtHYuMHbaGtec0ojiGtPOkCCFkhIY0HOdRZLeeB6VikdvwAaVcD8tyxhDx954GnLJLra6VgjQ8oj3ODSq83+OD9eXozJrgvGw/jRYnrYYEmSqKHZvL/GxIpTJiSCrvkyJgiPPTzLvbz0TePWZ5ipseVJhfCc/CAV1m+wvF6nT+avbjGPdgQWXPue9E8eIOAwE9WIOdzF5dcObNzYyusgQJwc=",
+
+    "powershell.integratedConsole.showOnStartup": false,
+
     "prettier.tabWidth": 4,
-    "todo-tree.tree.showScanModeButton": false,
+
     "todo-tree.highlights.enabled": true,
     "todo-tree.general.tags": [
         "BUG",
@@ -240,7 +114,12 @@
         "FIXME",
         "TODO",
         "XXX",
-        "todo"
+        "todo",
+        "[ ]",
+        "[x]"
     ],
-    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|@)\\s*($TAGS)|^\\s*- \\[ \\])"
+
+    "redhat.telemetry.enabled": false,
+
+    "wallaby.showUpdateNotifications": false
 }
