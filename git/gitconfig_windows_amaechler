@@ -1,9 +1,11 @@
 [include]
-    path = c:/Users/amaechler/Development/GitHub/_Personal/dotfiles/git/gitconfig
+    path = c:/Users/amaechler/Development/Personal/dotfiles/git/gitconfig
 [core]
     editor = "code -w"
 [credential]
     helper = manager-core
+[credential "helperselector"]
+    selected = manager-core
 [difftool "bc"]
     path = c:/Users/amaechler/scoop/apps/beyondcompare/current/Bcomp.exe
 [mergetool "bc"]
