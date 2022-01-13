@@ -12,7 +12,7 @@ function Scoop-Update() {
 }
 
 function ap-restore-dev_andy() {
-    Copy-Item "\\files.net.pandell.com\Products_And_Support\_Databases\AP\AP_Development.bak" -Destination "C:\sqlbackups"
+    # Copy-Item "\\files.net.pandell.com\Products_and_Support\TeamCityDeployDatabases\AP\AP_Development.bak" -Destination "C:\sqlbackups"
 
     # drop the existing AP_Development_Andy database
     & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
@@ -24,11 +24,11 @@ function ap-restore-dev_andy() {
     
     # restore the database inside the container; specify new paths for each of the files from previous step
     & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
-        -Q "RESTORE DATABASE AP_Development_Andy FROM DISK = '/sqlbackups/AP_Development.bak' WITH MOVE 'AP_Experiment' TO '/var/opt/mssql/data/AP_Development_Andy.mdf', MOVE 'AP_Experiment_log' TO '/var/opt/mssql/data/AP_Development_Andy_log.ldf'"
+        -Q "RESTORE DATABASE AP_Development_Andy FROM DISK = '/sqlbackups/AP_Development.bak' WITH MOVE 'AP_Development' TO '/var/opt/mssql/data/AP_Development_Andy.mdf', MOVE 'AP_Development_log' TO '/var/opt/mssql/data/AP_Development_Andy_log.ldf'"
 }
 
 function ap-restore-experiment_andy() {
-    Copy-Item "\\files.net.pandell.com\Products_And_Support\_Databases\AP\AP_Experiment.bak" -Destination "C:\sqlbackups"
+    Copy-Item "\\files.net.pandell.com\Products_and_Support\TeamCityDeployDatabases\AP\AP_Experiment.bak" -Destination "C:\sqlbackups"
 
     # drop the existing AP_Development_Andy database
     & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
@@ -86,7 +86,7 @@ function connect-run-upgrade() {
 }
 
 function pcp-restore-dev_andy() {
-    Copy-Item "\\wm2016sql01.net.pandell.com\SQLDROPFOLDER\PCP\PCP_Development.bak" -Destination "C:\sqlbackups"
+    # Copy-Item "\\wm2016sql01.net.pandell.com\SQLDROPFOLDER\PCP\PCP_Development.bak" -Destination "C:\sqlbackups"
 
     # drop the existing AP_Development_Andy database
     & docker exec -it test-sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "yourStrong(!)Password" `
@@ -112,7 +112,6 @@ function pcp-run-upgrade() {
         -d "appConfig:${PandellDevelopmentDir}PCP\src\Pandell.PCP.Web\Web.config" `
         -x UpgradeDatabase
 }
-
 
 # getfileencoding implementation
 function Get-FileEncoding($Path) {
