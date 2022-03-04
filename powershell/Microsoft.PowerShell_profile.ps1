@@ -11,9 +11,12 @@ if ((Get-Module PSReadLine).Version -ge "2.1.0") {
 
 # https://github.com/dahlbyk/posh-git
 Import-Module posh-git
-Invoke-Expression (oh-my-posh --init `
-        --shell pwsh `
-        --config ~\Development\Personal\dotfiles\oh-my-posh-amaechler.omp.json)
+
+# https://github.com/jandedobbeleer/oh-my-posh
+oh-my-posh `
+    --init `
+    --shell pwsh `
+    --config ~\Development\Personal\dotfiles\oh-my-posh-amaechler.omp.json | Invoke-Expression
 
 # https://github.com/devblackops/Terminal-Icons
 Import-Module -Name Terminal-Icons
