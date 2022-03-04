@@ -11,7 +11,10 @@
     "editor.multiCursorModifier": "alt",
     "editor.renderWhitespace": "all",
     "editor.rulers": [120],
-
+    "editor.unicodeHighlight.allowedCharacters": {
+        "×": true
+    },
+    
     "explorer.confirmDragAndDrop": false,
 
     "extensions.autoUpdate": true,
