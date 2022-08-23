@@ -82,5 +82,7 @@
     # do not attempt to merge the remote branch into the
     # local branch. We almost never want this.
     ff = only
+[push]
+    autoSetupRemote = true
 [rebase]
     autosquash = true

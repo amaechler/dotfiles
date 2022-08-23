@@ -1,0 +1,41 @@
+# volta (node / npm manager) configuration
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# configure brew completion (https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh)
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# zsh-autosuggestions, suggests commands in grey
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# custom zstyles
+
+# fuzzy match anything (https://unix.stackexchange.com/a/587943)
+zstyle ':completion:*' matcher-list 'r:|?=**'
+
+zstyle ':completion:*:parameters' ignored-patterns '_*'
+
+# execute oh-my-posh prompt
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+  eval "$(oh-my-posh init zsh \
+    --config ~/Development/Personal/dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json)"
+fi
+
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# custom environment variables
+alias ll="ls -AlG"
+
+# sdkman configuration - needs to be at the end of file
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+alias ssh="BLESS_INVOKE_SSH=Y /Users/amaechler/.bless/getcert"
+export PATH="$PATH:/Users/amaechler/.bless"
+alias sshuttle="getcert; sshuttle"

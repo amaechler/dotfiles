@@ -1,8 +1,9 @@
 [include]
-    path = ~/Dropbox/dotfiles/git/gitconfig
+    path = ~/Development/Personal/dotfiles/git/gitconfig
 [alias]
-  prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -n 1 git branch -d
+    prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -n 1 git branch -D
 [core]
+    editor = "code -w"
     excludesfile = /Users/amaechler/.gitignore_global
 [credential]
     helper = osxkeychain
@@ -12,9 +13,3 @@
 [mergetool "bc"]
     trustExitCode = true
     cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-[mergetool "sourcetree"]
-    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
