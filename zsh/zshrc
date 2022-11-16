@@ -23,7 +23,7 @@ zstyle ':completion:*:parameters' ignored-patterns '_*'
 
 # execute oh-my-posh prompt
 if [ $TERM_PROGRAM = "iTerm.app" ]; then
-  eval "$(oh-my-posh init zsh \
+  eval "$(/opt/homebrew/bin/oh-my-posh init zsh \
     --config ~/Development/Personal/dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json)"
 fi
 
