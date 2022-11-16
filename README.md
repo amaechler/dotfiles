@@ -45,17 +45,6 @@ mklink /J C:\Users\andreasm\Documents\PowerShell "C:\Users\andreasm\Development\
 > mklink "C:\Users\amaechler\_vimrc" "C:\Users\amaechler\Development\Personal\dotfiles\vim\_vimrc"
 ```
 
-## VSCode user settings
-
-```sh
-# windows
-> mklink C:\Users\amaechler\AppData\Roaming\Code\User\settings.json "C:\Users\amaechler\Development\Personal\dotfiles\vscode\settings.json"
-> mklink C:\Users\amaechler\AppData\Roaming\Code\User\keybindings.json "C:\Users\amaechler\Development\Personal\dotfiles\vscode\keybindings.json"
-
-> mklink C:\Users\andreasm\AppData\Roaming\Code\User\settings.json "C:\Users\andreasm\Development\Personal\dotfiles\vscode\settings.json"
-> mklink C:\Users\andreasm\AppData\Roaming\Code\User\keybindings.json "C:\Users\andreasm\Development\Personal\dotfiles\vscode\keybindings.json"
-```
-
 ## Windows Terminal
 
 ```sh
