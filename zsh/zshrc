@@ -33,9 +33,11 @@ fi
 # custom environment variables
 alias ll="ls -AlG"
 
-# sdkman configuration - needs to be at the end of file
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 alias ssh="BLESS_INVOKE_SSH=Y /Users/amaechler/.bless/getcert"
 export PATH="$PATH:/Users/amaechler/.bless"
 alias sshuttle="getcert; sshuttle"
+
+# sdkman configuration - needs to be at the end of file
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

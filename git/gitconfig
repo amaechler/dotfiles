@@ -3,7 +3,8 @@
     email = amaechler@gmail.com
 [alias]
     # Show verbose output about tags, branches or remotes
-    branches = branch -a
+    branches = branch --sort=-committerdate
+    branches-all = branch -a
     remotes = remote -v
     stashes = stash list
     tags = tag -l
