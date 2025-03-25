@@ -3,8 +3,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # configure brew completion (https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh)
-if type brew &>/dev/null
-then
+if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
   autoload -Uz compinit
@@ -41,3 +40,16 @@ alias sshuttle="getcert; sshuttle"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
+
+# always set docker host
+# export DOCKER_HOST=unix:///Users/$USER/.docker/run/docker.sock
+
+# volta (node / npm manager) configuration
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# run oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/Development/Personal/dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json)"
