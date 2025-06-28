@@ -26,7 +26,6 @@
         },
         {
           "properties": {
-            "fetch_stash_count": true,
             "fetch_status": true
           },
           "style": "powerline",
@@ -62,9 +61,7 @@
           "template": "❯ ",
           "foreground": "#D4E157",
           "type": "exit",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#FF5252{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}#FF5252{{ end }}"]
         }
       ],
       "newline": true
