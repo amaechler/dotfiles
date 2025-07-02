@@ -4,7 +4,7 @@
 
 ```sh
 # macos
-$ ln -s ~/Dropbox/dotfiles/git/gitconfig_macos .gitconfig
+$ ln -s ~/Development/Personal/dotfiles/git/gitconfig_macos .gitconfig
 
 # windows
 > mklink c:\Users\amaechler\.gitconfig "C:\Users\amaechler\Development\Personal\dotfiles\git\gitconfig_windows_amaechler"
@@ -51,4 +51,11 @@ mklink /J C:\Users\andreasm\Documents\PowerShell "C:\Users\andreasm\Development\
 # windows
 > mklink /J "C:\Users\amaechler\AppData\Local\Microsoft\Windows Terminal" "C:\Users\amaechler\Development\Personal\dotfiles\windows-terminal"
 > mklink /J "C:\Users\andreasm\AppData\Local\Microsoft\Windows Terminal" "C:\Users\andreasm\Development\Personal\dotfiles\windows-terminal"
+```
+
+## zsh
+
+```sh
+# macos
+ln -s ~/Development/Personal/dotfiles/zsh/zshrc .zshrc
 ```
