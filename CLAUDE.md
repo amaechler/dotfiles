@@ -11,9 +11,9 @@ Personal dotfiles repo. Config files live here and are symlinked into their expe
 Each top-level directory targets one tool. The README.md has the exact `ln`/`mklink` commands for installing each group on each OS; check it before suggesting a new location for a file.
 
 - `git/` — multiple gitconfig variants per-OS and per-user (`gitconfig_macos`, `gitconfig_windows_amaechler`, `gitconfig_windows_andreasm`, `gitconfig_wsl2_amaechler`). `gitconfig` is the base/reference file. Keep platform-specific drift intentional; when changing shared aliases, consider applying to all variants.
-- `zsh/zshrc` — primary interactive shell on macOS. Order matters: `compinit` before plugins, `zsh-syntax-highlighting` must be sourced last, `mise activate` and sdkman go at the very end.
+- `zsh/zshrc` — primary interactive shell on macOS. Order matters: `compinit` before plugins, `zsh-syntax-highlighting` must be sourced last, `mise activate` and sdkman go at the very end. The final line sources `~/.zshrc.imply` if present — that file is intentionally untracked and holds work-specific aliases/env vars (tsh, AWS profile). Never inline work-specific config into the tracked `zshrc`; put it in `~/.zshrc.imply`.
 - `bash/`, `fish/config.fish` — legacy/secondary shells. Don't assume they mirror zsh.
-- `powershell/` — Windows profile loaded via `Microsoft.PowerShell_profile.ps1`, which dot-sources `git_scripts.ps1`, `link_global.ps1`, and `aliases_dev.ps1`. `link_global.ps1` is the PowerShell equivalent of bash's `yarn-bin` pattern — walks up from cwd to find `node_modules/.bin/<cmd>`.
+- `powershell/` — Windows profile loaded via `Microsoft.PowerShell_profile.ps1`, which dot-sources `git_scripts.ps1` and `link_global.ps1`. `link_global.ps1` is the PowerShell equivalent of bash's `yarn-bin` pattern — walks up from cwd to find `node_modules/.bin/<cmd>`.
 - `oh-my-posh/oh-my-posh-amaechler.omp.json` — shared prompt theme consumed by zsh, fish, and pwsh configs.
 - `vim/_vimrc`, `windows-terminal/settings.json` — Windows-only.
 - `brew_programs_list.txt`, `scoop_export.txt` — inventory snapshots, not auto-applied.
