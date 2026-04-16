@@ -22,8 +22,8 @@ $ ln -s /mnt/c/Users/amaechler/Development/Personal/dotfiles/git/gitconfig_wsl2_
 
 ```sh
 # macos
-ln -s /Users/amaechler/Dropbox/dotfiles/bash/bash_profile ~/.bash_profile
-ln -s /Users/amaechler/Dropbox/dotfiles/bash/bashrc ~/.bashrc
+ln -s ~/Development/Personal/dotfiles/bash/bash_profile ~/.bash_profile
+ln -s ~/Development/Personal/dotfiles/bash/bashrc ~/.bashrc
 ```
 
 ## PowerShell
@@ -57,5 +57,19 @@ mklink /J C:\Users\andreasm\Documents\PowerShell "C:\Users\andreasm\Development\
 
 ```sh
 # macos
-ln -s ~/Development/Personal/dotfiles/zsh/zshrc .zshrc
+ln -s ~/Development/Personal/dotfiles/zsh/zshrc ~/.zshrc
 ```
+
+Work/host-specific overrides (not tracked) can go in `~/.zshrc.imply`; `zshrc` sources it at the end if present.
+
+## fish
+
+```sh
+# macos
+ln -s ~/Development/Personal/dotfiles/fish/config.fish ~/.config/fish/config.fish
+```
+
+## oh-my-posh
+
+No symlink needed — the zsh, fish, and pwsh configs read the theme directly from
+`dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json`.

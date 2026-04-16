@@ -16,7 +16,7 @@ Import-Module posh-git
 oh-my-posh `
     --init `
     --shell pwsh `
-    --config ~\Development\Personal\dotfiles\oh-my-posh-amaechler.omp.json | Invoke-Expression
+    --config ~\Development\Personal\dotfiles\oh-my-posh\oh-my-posh-amaechler.omp.json | Invoke-Expression
 
 # https://github.com/devblackops/Terminal-Icons
 Import-Module -Name Terminal-Icons
@@ -26,8 +26,5 @@ Import-Module "$HOME\scoop\apps\scoop\current\supporting\completion\Scoop-Comple
     -ErrorAction SilentlyContinue
 
 # Load custom scripts
-$script:PandellDevelopmentDir = "$HOME\Development\Pandell\"
-
 . $PSScriptRoot\git_scripts.ps1
 . $PSScriptRoot\link_global.ps1
-. $PSScriptRoot\aliases_dev.ps1

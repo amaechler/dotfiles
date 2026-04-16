@@ -34,11 +34,6 @@ setopt ALWAYS_TO_END # Move cursor to end after completion
 
 # custom aliases
 alias ll="ls -AlG"
-alias tsh-int="tsh login --proxy=tp.eng.imply.io:443 --auth=local --user=andy.maechler@imply.io tp.eng.imply.io"
-alias tsh-ext="tsh login --proxy=tp.imply.io:443 --auth=local --user=andy.maechler@imply.io teleport-ext"
-
-# AWS default profile
-export AWS_PROFILE=iow-dev
 
 # run oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/Development/Personal/dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json)"
@@ -52,4 +47,7 @@ eval "$(mise activate zsh)"
 # sdkman configuration - needs to be at the end of file
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# work-specific overrides (not tracked in dotfiles)
+[[ -f ~/.zshrc.imply ]] && source ~/.zshrc.imply
 
