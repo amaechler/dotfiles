@@ -1,8 +1,3 @@
-# volta (node / npm manager) configuration
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export VOLTA_FEATURE_PNPM=1 # enable experimental pnpm support
-
 # add .local/bin to PATH for user installed binaries
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -42,12 +37,19 @@ alias ll="ls -AlG"
 alias tsh-int="tsh login --proxy=tp.eng.imply.io:443 --auth=local --user=andy.maechler@imply.io tp.eng.imply.io"
 alias tsh-ext="tsh login --proxy=tp.imply.io:443 --auth=local --user=andy.maechler@imply.io teleport-ext"
 
+# AWS default profile
+export AWS_PROFILE=iow-dev
+
 # run oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/Development/Personal/dotfiles/oh-my-posh/oh-my-posh-amaechler.omp.json)"
 
 # zsh-syntax-highlighting - highlights commands as you type (must be at end)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# activate mise
+eval "$(mise activate zsh)"
+
 # sdkman configuration - needs to be at the end of file
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
